@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="me.tonny.cordova.plugins.multidex" version="0.1.0">
+  <name>Cordova Multi Dex</name>
+  <description>This do and only do add the Multidex inside the Android manifest</description>
+
+  <license>MIT</license>
+
+  <engines>
+    <engine name="cordova" version=">=3.5.0" />
+  </engines>
+
+  <platform name="android">
+    <hook type="before_compile" src="src/updateMultidexManifest.js" />
+    <hook type="after_platform_add" src="src/updateMultidexManifest.js" />
+
+    <framework src="build.gradle" custom="true" type="gradleReference" />
+  </platform>
+
+</plugin>
