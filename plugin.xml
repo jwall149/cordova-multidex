@@ -11,8 +11,8 @@
   </engines>
 
   <platform name="android">
-    <hook type="before_compile" src="src/updateMultidexManifest.js" />
-    <hook type="after_platform_add" src="src/updateMultidexManifest.js" />
+    <hook type="before_compile" src="updateMultidexManifest.js" />
+    <hook type="after_platform_add" src="updateMultidexManifest.js" />
 
     <framework src="build.gradle" custom="true" type="gradleReference" />
   </platform>
