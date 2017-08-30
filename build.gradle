@@ -4,7 +4,8 @@ android {
         multiDexEnabled true
     }
     configurations { 
-        all*.exclude group: 'com.google.android.gms'
+        // all*.exclude group: 'com.google.android.gms'
+        all*.exclude module: 'actions'
     }
 }
 
