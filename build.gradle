@@ -4,7 +4,7 @@ android {
         multiDexEnabled true
     }
     configurations {
-        all*.exclude  module: 'google-play-services'
+        all*.exclude group: 'com.google.android.gms'
     }
 }
 
