@@ -4,7 +4,7 @@ android {
         multiDexEnabled true
     }
     configurations {
-        all*.exclude  module: 'play-services-basement'
+        all*.exclude  module: 'google-play-services'
     }
 }
 
