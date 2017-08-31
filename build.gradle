@@ -4,8 +4,8 @@ android {
         multiDexEnabled true
     }
     configurations { 
-        // all*.exclude group: 'com.google.android.gms'
-        all*.exclude module: 'actions'
+        all*.exclude group: 'com.google.android.gms', module: 'actions'
+        all*.exclude group: 'com.android.support', module: 'support-v4'
     }
 }
 
