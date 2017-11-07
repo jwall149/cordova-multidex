@@ -1,0 +1,23 @@
+{
+  "name": "cordova-multidex",
+  "version": "1.0.0",
+  "description": "Enable android multidex mode",
+  "main": "updateMultidexManifest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwal149/cordova-multidex.git"
+  },
+  "keywords": [
+    "cordova",
+    "android",
+    "multidex"
+  ],
+  "author": "jwal149",
+  "bugs": {
+    "url": "https://github.com/jwal149/cordova-multidex/issues"
+  },
+  "homepage": "https://github.com/jwal149/cordova-multidex#readme"
+}
