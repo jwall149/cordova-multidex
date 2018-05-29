@@ -3,7 +3,19 @@ module.exports = function(ctx) {
         path = ctx.requireCordovaModule('path'),
         xml = ctx.requireCordovaModule('cordova-common').xmlHelpers;
 
-    var manifestPath = path.join(ctx.opts.projectRoot, 'platforms/android/AndroidManifest.xml');
+    var manifestSubPaths = ['platforms/android/AndroidManifest.xml', 'platforms/android/app/src/main/AndroidManifest.xml'];
+    var manifestPath = null;
+    for (var i = 0, len = manifestSubPaths.length; i < len; i++) {
+        var candidatePath = path.join(ctx.opts.projectRoot, manifestSubPaths[i]);
+        if (fs.existsSync(candidatePath)) {
+            manifestPath = candidatePath;
+            break;
+        }
+    }
+    if (manifestPath === null) {
+        throw new Error('AndroidManifest.xml not found');
+    }
+
     var doc = xml.parseElementtreeSync(manifestPath);
     if (doc.getroot().tag !== 'manifest') {
         throw new Error(manifestPath + ' has incorrect root node name (expected "manifest")');
