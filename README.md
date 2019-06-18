@@ -4,6 +4,7 @@ This plugin do and only do add the Multidex to AndroidManifest.xml following rul
 
 It has been optimized to work with androidx libraries. 
 
-Other useful libraries for your cordova app:
-https://github.com/dpa99c/cordova-plugin-androidx
-https://github.com/dpa99c/cordova-plugin-androidx-adapter
+Other useful libraries for your cordova app:  
+
+- https://github.com/dpa99c/cordova-plugin-androidx
+- https://github.com/dpa99c/cordova-plugin-androidx-adapter
