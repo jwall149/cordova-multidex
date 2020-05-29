@@ -24,7 +24,7 @@ module.exports = function(ctx) {
     //adds the tools namespace to the root node
     // doc.getroot().attrib['xmlns:tools'] = 'http://schemas.android.com/tools';
     //add tools:replace in the application node
-    doc.getroot().find('./application').attrib['android:name'] = 'android.support.multidex.MultiDexApplication';
+    doc.getroot().find('./application').attrib['android:name'] = 'androidx.multidex.MultiDexApplication';
 
     //write the manifest file
     fs.writeFileSync(manifestPath, doc.write({indent: 4}), 'utf-8');
