@@ -17,7 +17,7 @@ module.exports = (ctx) => {
         throw new Error('AndroidManifest.xml not found');
     }
 
-    let doc = xml.parseElementtreeSync(manifestPath);
+    const doc = xml.parseElementtreeSync(manifestPath);
     if (doc.getroot().tag !== 'manifest') {
         throw new Error(manifestPath + ' has incorrect root node name (expected "manifest")');
     }
